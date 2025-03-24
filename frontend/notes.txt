@@ -1,0 +1,2 @@
+server side retrieval vs client side local storage to persist state after refresh
+i used server side retrieval in lifeline project and will use localstorage in this one
