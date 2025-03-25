@@ -42,8 +42,7 @@ export const getMyMems = async () => {
 
 export const getMemFromLink = async (memId) => {
   try {
-    const response = await axiosInstance.get(`/mems/mJHbAQfVWp`);
-    // const response = await axiosInstance.get(`/mems/${memId}`);
+    const response = await axiosInstance.get(`/mems/${memId}`);
     return response.data;
   } catch (error) {
     console.error("Error while getting mem: ", error);
