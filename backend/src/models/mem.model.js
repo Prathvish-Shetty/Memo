@@ -7,7 +7,7 @@ const memSchema = new Schema(
     title: { type: String, required: true },
     content: { type: String, required: true },
     isPublic: { type: Boolean, default: false },
-    shareableLink: { type: String, unique: true, sparse: true }, // stores only the token
+    shareableLink: { type: String }, // stores only the token
   },
   { timestamps: true }
 );

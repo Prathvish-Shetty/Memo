@@ -36,7 +36,8 @@ export const updateMem = async (req, res) => {
     if (isPublic) {
       await mem.generateNewShareableLink(); 
     } else {
-      await Mem.updateOne({ _id: mem._id }, { $unset: { shareableLink: 1 } });
+      mem.shareableLink = null;
+      await mem.save();
     }
     res.status(200).json({ message: "Mem updated successfully", mem });
   } catch (error) {
@@ -71,7 +72,7 @@ export const getPublicMem = async (req, res) => {
     if (!token) {
       return res.status(400).json({ message: "Token is required" });
     }
-    const mem = await Mem.findOne({ shareableLink: token, isPublic: true }).select("-userId");
+    const mem = await Mem.findOne({ shareableLink: token, isPublic: true });
     if (!mem) {
       return res.status(404).json({ message: "Mem not found or is private" });
     }
