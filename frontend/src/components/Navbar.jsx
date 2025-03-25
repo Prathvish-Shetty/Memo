@@ -30,7 +30,6 @@ function Navbar() {
             className="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
             <li><Link to='/' className={getActiveClass('/')}>Home</Link></li>
             <li><Link to='/mems' className={getActiveClass('/mems')}>My Mems</Link></li>
-            <li><Link to='/create-mem' className={getActiveClass('/create-mem')}>Create Mem</Link></li>
           </ul>
         </div>
         <Link to='/' className="btn btn-ghost text-xl">Memo</Link>
