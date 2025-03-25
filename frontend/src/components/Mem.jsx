@@ -5,7 +5,7 @@ function Mem({ mem, onEdit, onDelete }) {
   const [showAlert, setShowAlert] = useState(false);
   // Function to copy the mem link
   const handleShare = () => {
-    const memLink = `${window.location.origin}/mems/mem/${mem.shareableLink}`;
+    const memLink = `${window.location.origin}/mem/${mem.shareableLink}`;
     navigator.clipboard.writeText(memLink)
       .then(() => {
         setShowAlert(true);
