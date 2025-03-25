@@ -36,7 +36,6 @@ export const updateMem = async (req, res) => {
     if (isPublic) {
       await mem.generateNewShareableLink(); 
     } else {
-      mem.shareableLink = null;
       await mem.save();
     }
     res.status(200).json({ message: "Mem updated successfully", mem });
