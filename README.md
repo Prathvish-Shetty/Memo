@@ -87,6 +87,13 @@ Both the **frontend** and **backend** are deployed on **Vercel**. Update the `.e
 ## Special Thanks ❤️
 A huge thanks to DaisyUI for providing an amazing UI component library, making the design process smooth and efficient!
 
+## 🤝 Contribution
+Contributions are welcome! Feel free to fork the repository and submit pull requests.
+
+## 📧 Contact
+If you have any questions, feel free to reach out:
+- **LinkedIn:** [Prathvish Shetty](https://www.linkedin.com/in/prathvish-shetty-24227a257)
+
 ## License 📝  
 
 This project is **open-source** under the **MIT License**.  
