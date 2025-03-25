@@ -11,6 +11,10 @@ app.use(cors({
   credentials: true
 }))
 
+app.get('/', (req, res) => {
+  res.json({message: "Backend is running"})
+})
+
 import authRouter from "./routes/auth.routes.js"
 import memRouter from "./routes/mem.routes.js"
 
