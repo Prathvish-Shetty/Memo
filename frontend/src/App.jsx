@@ -6,6 +6,7 @@ import Login from './pages/Login.jsx'
 import Signup from './pages/Signup.jsx'
 import Mems from './pages/Mems.jsx'
 import ViewMem from './pages/ViewMem.jsx'
+import ProtectedRoute from './components/ProtectedRoute.jsx'
 
 function App() {
   return (
@@ -15,7 +16,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/mems' element={<Mems />}/>
+          <Route path='/mems' element={<ProtectedRoute><Mems /></ProtectedRoute>}/>
           <Route path='/mem/:id' element={<ViewMem />}/>
         </Route>
       </Routes>
