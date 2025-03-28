@@ -1,5 +1,5 @@
 import './App.css'
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Layout from './pages/Layout.jsx'
 import Home from './pages/Home.jsx'
 import Login from './pages/Login.jsx'
@@ -16,8 +16,10 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/login' element={<Login />} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='/mems' element={<ProtectedRoute><Mems /></ProtectedRoute>}/>
-          <Route path='/mem/:id' element={<ViewMem />}/>
+          <Route element={<ProtectedRoute />}>
+            <Route path='/mems' element={<Mems />} />
+          </Route>
+          <Route path='/mem/:id' element={<ViewMem />} />
         </Route>
       </Routes>
     </Router>
