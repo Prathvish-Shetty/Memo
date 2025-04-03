@@ -13,10 +13,10 @@ export const createMem = async (req, res) => {
       isPublic: isPublic || false,
     });
 
-    if (isPublic) {
+    // if (isPublic) {
       await newMem.generateNewShareableLink();
-    }
-    await newMem.save();
+    // }
+    // await newMem.save();
     res.status(201).json({ message: "Mem created successfully", mem: newMem });
   } catch (error) {
     res.status(500).json({ message: "Failed to create mem", error: error.message });
